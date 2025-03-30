@@ -8,15 +8,18 @@ import { CommonLayout } from './CommonLayout/CommonLayout';
 export const App =()=>{
   const router = createBrowserRouter([
     {
-      path: '/Mystories',
-      element: <CommonLayout/>,
+      path: '/',
+      element: <CommonLayout />,
       children: [
-        {path:"/Mystories",element:<Home/>},
+        { path: '/', element: <Home /> },
         { path: 'about', element: <About /> },
-        { path: 'stories', element: <Stories /> }
+        { path: 'stories', element: <Stories /> },
       ],
     },
-  ]);
+  ], {
+    basename: "/Mystories"
+  });
+  
 
   return(
     <>
