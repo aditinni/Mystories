@@ -20,7 +20,7 @@ export const Home = () => {
           </div>
   
           <div className="cta">
-            <a href="/stories" className="explore-button">Explore Stories</a>
+            <a href="/Mystories/stories" className="explore-button">Explore Stories</a>
           </div>
         </div>
       </>
