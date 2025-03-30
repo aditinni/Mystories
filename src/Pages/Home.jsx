@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export const Home = () => {
     return (
       <>
@@ -20,7 +22,7 @@ export const Home = () => {
           </div>
   
           <div className="cta">
-            <a href="/Mystories/stories" className="explore-button">Explore Stories</a>
+            <NavLink to={"/stories"} className="explore-button">Explore Stories</NavLink>
           </div>
         </div>
       </>
