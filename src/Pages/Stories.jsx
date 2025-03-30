@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
+import { Worker, Viewer } from '@react-pdf-viewer/core';
+import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
+import '@react-pdf-viewer/core/lib/styles/index.css';
+import '@react-pdf-viewer/default-layout/lib/styles/index.css';
+
 import EchoesofLife from '../assets/echoes_of_life.png';
 import EchoesOfLifepdf from "../assets/Echoes_of_Life.pdf";
-import Second from '../assets/second.png'
-import IfyouhadAskedThen from '../assets/If_you_had_Asked_then.pdf'
+import Second from '../assets/second.png';
+import IfyouhadAskedThen from '../assets/If_you_had_Asked_then.pdf';
 
+import worker from 'pdfjs-dist/build/pdf.worker.min.js?url'; // 👈 local worker
 
 const Stories = () => {
   const [selectedPdf, setSelectedPdf] = useState(null);
+
+  // 📌 Create plugin instance for zooming & layout
+  const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
   const stories = [
     {
@@ -25,7 +34,6 @@ const Stories = () => {
       description: "A nostalgic look at missed chances and unspoken feelings between Avinash and Harshita",
       pdf: IfyouhadAskedThen
     },
-
   ];
 
   return (
@@ -48,15 +56,14 @@ const Stories = () => {
 
       {selectedPdf && (
         <div className="pdf-overlay">
-          <div className="pdf-viewer">
+          <div className="pdf-viewer-container">
             <button className="close-btn" onClick={() => setSelectedPdf(null)}>✖</button>
-            <iframe
-              src={`${selectedPdf}#toolbar=0`}
-              title="PDF Preview"
-              width="100%"
-              height="100%"
-              style={{ border: 'none' }}
-            ></iframe>
+            <Worker workerUrl={worker}>
+              <Viewer
+                fileUrl={selectedPdf}
+                plugins={[defaultLayoutPluginInstance]} // ✅ enable zoom + nav
+              />
+            </Worker>
           </div>
         </div>
       )}
