@@ -1,19 +1,21 @@
 {
   "files": {
     "main.css": "/Mystories/static/css/main.486a0cf7.css",
-    "main.js": "/Mystories/static/js/main.a5bb28b5.js",
+    "main.js": "/Mystories/static/js/main.fb2d45d9.js",
     "static/js/453.aa68ba2a.chunk.js": "/Mystories/static/js/453.aa68ba2a.chunk.js",
     "static/media/echoes_of_life.png": "/Mystories/static/media/echoes_of_life.706d561423f683c4cd31.png",
     "static/media/second.png": "/Mystories/static/media/second.e88a8e0e45138b2f61c0.png",
+    "static/media/you_know_I_know.pdf": "/Mystories/static/media/you_know_I_know.f8699ef05707a1501d7a.pdf",
     "static/media/Echoes_of_Life_Stories.pdf": "/Mystories/static/media/Echoes_of_Life_Stories.445753807cb6805ad923.pdf",
     "static/media/If_you_had_Asked_then.pdf": "/Mystories/static/media/If_you_had_Asked_then.99a7961d3efaf78a75a6.pdf",
+    "static/media/third.png": "/Mystories/static/media/third.b7af76455acbbf846180.png",
     "index.html": "/Mystories/index.html",
     "main.486a0cf7.css.map": "/Mystories/static/css/main.486a0cf7.css.map",
-    "main.a5bb28b5.js.map": "/Mystories/static/js/main.a5bb28b5.js.map",
+    "main.fb2d45d9.js.map": "/Mystories/static/js/main.fb2d45d9.js.map",
     "453.aa68ba2a.chunk.js.map": "/Mystories/static/js/453.aa68ba2a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.486a0cf7.css",
-    "static/js/main.a5bb28b5.js"
+    "static/js/main.fb2d45d9.js"
   ]
 }
